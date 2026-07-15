@@ -83,8 +83,8 @@ README.md       → Project overview (this file)
 
 | Member | Role |
 |---|---|
-| [Your Name] | Vulnerability scanning, correlation engine |
-| [Teammate Name] | Identity/AD lab, BloodHound validation |
+| Ishwarya | Vulnerability scanning, correlation engine |
+| Akshiya | Identity/AD lab, BloodHound validation |
 
 ---
 
