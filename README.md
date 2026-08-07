@@ -110,3 +110,13 @@ README.md       → Project overview (this file)
 ## License
 
 This project is for academic/educational purposes.
+
+
+## How to Run
+```bash
+pip install -r requirements.txt --break-system-packages
+
+python3 engine/fetch_epss_real.py     # enrich real scan CVEs with EPSS scores
+python3 engine/score_identity.py      # score identity exposure
+python3 engine/correlate.py           # fuse into unified risk scores
+```

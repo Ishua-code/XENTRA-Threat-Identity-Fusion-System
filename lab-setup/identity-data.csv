@@ -1,0 +1,4 @@
+username,privilege_level,mfa_enabled,last_login_days_ago,owned_asset_ip
+admin_john,domain_admin,false,2,127.0.0.1
+admin_sara,domain_admin,true,1,127.0.0.1
+user_amit,standard,false,45,127.0.0.1
