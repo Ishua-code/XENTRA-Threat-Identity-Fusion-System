@@ -1,4 +1,6 @@
 username,privilege_level,mfa_enabled,last_login_days_ago,owned_asset_ip
 admin_john,domain_admin,false,2,127.0.0.1
-admin_sara,domain_admin,true,1,127.0.0.1
-user_amit,standard,false,45,127.0.0.1
+admin_sara,domain_admin,true,1,192.168.1.11
+user_amit,standard,false,45,192.168.1.12
+user_riya,standard,true,5,192.168.1.13
+service_backup,service_account,false,90,192.168.1.14
