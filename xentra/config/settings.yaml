@@ -1,0 +1,25 @@
+paths:
+  cve_dataset: "datasets/cve-list.csv"
+  identity_dataset: "lab-setup/identity-data.csv"
+  enriched_vulnerabilities: "engine/real-enriched-vulnerabilities.csv"
+  scored_identities: "engine/scored-identities.csv"
+  unified_scores: "engine/unified-risk-scores.csv"
+
+scoring:
+  epss_weight: 0.5
+  identity_weight: 0.5
+  risk_threshold_critical: 0.8
+  risk_threshold_high: 0.5
+
+identity_scoring:
+  domain_admin_weight: 0.4
+  service_account_weight: 0.3
+  standard_weight: 0.1
+  no_mfa_penalty: 0.4
+  stale_account_days: 30
+  stale_account_penalty: 0.2
+
+api:
+  epss_base_url: "https://api.first.org/data/v1/epss"
+  request_timeout: 10
+  rate_limit_delay: 0.5
