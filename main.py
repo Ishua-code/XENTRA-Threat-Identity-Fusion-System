@@ -1,5 +1,7 @@
+import csv
 from xentra.core.epss_client import EPSSClient
 from xentra.core.identity_scorer import IdentityScorer
+from xentra.core.graph_risk_analyzer import GraphRiskAnalyzer
 from xentra.core.correlation_engine import CorrelationEngine
 from xentra.utils.logger import get_logger
 
@@ -14,11 +16,18 @@ def run_pipeline():
     epss_client = EPSSClient()
     epss_client.enrich_dataset()
 
-    logger.info("STAGE 2: Identity Exposure Scoring")
+    logger.info("STAGE 2: Identity Exposure Scoring (Rule-Based)")
     identity_scorer = IdentityScorer()
     identity_scorer.score_all_identities()
 
-    logger.info("STAGE 3: Correlation Engine")
+    logger.info("STAGE 2.5: Graph-Based Attack Path Risk Analysis")
+    with open("lab-setup/identity-data.csv") as f:
+        identities = list(csv.DictReader(f))
+    graph_analyzer = GraphRiskAnalyzer()
+    graph_results = graph_analyzer.analyze_all(identities)
+    graph_analyzer.save_results(graph_results)
+
+    logger.info("STAGE 3: Correlation Engine (Graph-Enhanced)")
     engine = CorrelationEngine()
     results = engine.run()
 

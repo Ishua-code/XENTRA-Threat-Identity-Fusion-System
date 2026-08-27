@@ -13,12 +13,15 @@ class CorrelationEngine:
         self.identity_weight = self.config["scoring"]["identity_weight"]
 
     def run(self):
-        logger.info("Loading enriched vulnerabilities and scored identities...")
+        logger.info("Loading enriched vulnerabilities, identity scores, and graph risk data...")
         with open(self.paths["enriched_vulnerabilities"]) as f:
             vulns = list(csv.DictReader(f))
         with open(self.paths["scored_identities"]) as f:
             identities = list(csv.DictReader(f))
+        with open("engine/graph-risk-analysis.csv") as f:
+            graph_data = list(csv.DictReader(f))
 
+        graph_lookup = {g["username"]: g for g in graph_data}
         asset_to_identity = {i["owned_asset_ip"]: i for i in identities}
 
         results = []
@@ -26,7 +29,24 @@ class CorrelationEngine:
             host = v["host"]
             identity = asset_to_identity.get(host)
             epss = float(v["epss_score"])
-            identity_score = float(identity["identity_exposure_score"]) if identity else 0.0
+
+            if identity:
+                username = identity["username"]
+                rule_based_score = float(identity["identity_exposure_score"])
+                graph_info = graph_lookup.get(username, {})
+                graph_proximity = float(graph_info.get("graph_proximity_score", 0.0))
+                centrality = float(graph_info.get("betweenness_centrality", 0.0))
+
+                # Combined identity risk: graph proximity is the primary signal,
+                # rule-based score and centrality add nuance
+                identity_score = round(
+                    (graph_proximity * 0.6) + (rule_based_score * 0.3) + (centrality * 0.1), 3
+                )
+            else:
+                username = "unknown"
+                identity_score = 0.0
+                graph_proximity = 0.0
+                centrality = 0.0
 
             unified_score = round(
                 (epss * self.epss_weight) + (identity_score * self.identity_weight), 3
@@ -35,9 +55,11 @@ class CorrelationEngine:
             results.append({
                 "cve_id": v["cve_id"],
                 "host": host,
-                "owner": identity["username"] if identity else "unknown",
+                "owner": username,
                 "epss_score": epss,
                 "identity_exposure_score": identity_score,
+                "graph_proximity_score": graph_proximity,
+                "betweenness_centrality": centrality,
                 "unified_risk_score": unified_score
             })
 
