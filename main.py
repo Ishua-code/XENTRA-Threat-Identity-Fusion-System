@@ -3,6 +3,7 @@ from xentra.core.epss_client import EPSSClient
 from xentra.core.identity_scorer import IdentityScorer
 from xentra.core.graph_risk_analyzer import GraphRiskAnalyzer
 from xentra.core.correlation_engine import CorrelationEngine
+from xentra.core.ticket_generator import TicketGenerator
 from xentra.utils.logger import get_logger
 
 logger = get_logger("Main")
@@ -31,10 +32,16 @@ def run_pipeline():
     engine = CorrelationEngine()
     results = engine.run()
 
+    logger.info("STAGE 4: Automated Response - Ticket Generation")
+    ticket_gen = TicketGenerator()
+    tickets = ticket_gen.generate_tickets()
+
     logger.info("=" * 50)
     logger.info("Top 5 Unified Risk Findings:")
     for r in results[:5]:
         logger.info(f"  {r['cve_id']} | {r['owner']} | Score: {r['unified_risk_score']}")
+    logger.info("=" * 50)
+    logger.info(f"Generated {len(tickets)} incident tickets for High/Critical findings")
     logger.info("=" * 50)
     logger.info("Pipeline complete.")
 

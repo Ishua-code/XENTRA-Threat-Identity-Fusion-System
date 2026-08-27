@@ -1,0 +1,491 @@
+[
+  {
+    "ticket_id": "XENTRA-20260827124851-1",
+    "title": "High Risk: CVE-2021-44228 on account 'vikram_29'",
+    "severity": "High",
+    "cve_id": "CVE-2021-44228",
+    "host": "192.168.1.10",
+    "owner": "vikram_29",
+    "epss_score": "0.99999",
+    "identity_exposure_score": "0.57",
+    "unified_risk_score": 0.785,
+    "attack_path": [
+      "vikram_29",
+      "192.168.1.10",
+      "DOMAIN_ADMIN"
+    ],
+    "hops_to_domain_admin": 2,
+    "recommended_actions": [
+      "Enforce MFA immediately on this account",
+      "Patch CVE-2021-44228 on host 192.168.1.10"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673312"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-2",
+    "title": "High Risk: CVE-2017-0144 on account 'vikram_29'",
+    "severity": "High",
+    "cve_id": "CVE-2017-0144",
+    "host": "192.168.1.10",
+    "owner": "vikram_29",
+    "epss_score": "0.9923",
+    "identity_exposure_score": "0.57",
+    "unified_risk_score": 0.781,
+    "attack_path": [
+      "vikram_29",
+      "192.168.1.10",
+      "DOMAIN_ADMIN"
+    ],
+    "hops_to_domain_admin": 2,
+    "recommended_actions": [
+      "Enforce MFA immediately on this account",
+      "Patch CVE-2017-0144 on host 192.168.1.10"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673359"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-3",
+    "title": "High Risk: CVE-2015-4000 on account 'john_16'",
+    "severity": "High",
+    "cve_id": "CVE-2015-4000",
+    "host": "192.168.1.13",
+    "owner": "john_16",
+    "epss_score": "0.9986",
+    "identity_exposure_score": "0.51",
+    "unified_risk_score": 0.754,
+    "attack_path": [
+      "john_16",
+      "192.168.1.13",
+      "DOMAIN_ADMIN"
+    ],
+    "hops_to_domain_admin": 2,
+    "recommended_actions": [
+      "Enforce MFA immediately on this account",
+      "Patch CVE-2015-4000 on host 192.168.1.13"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673388"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-4",
+    "title": "High Risk: CVE-2018-7600 on account 'sara_8'",
+    "severity": "High",
+    "cve_id": "CVE-2018-7600",
+    "host": "192.168.1.14",
+    "owner": "sara_8",
+    "epss_score": "0.99991",
+    "identity_exposure_score": "0.45",
+    "unified_risk_score": 0.725,
+    "attack_path": [
+      "sara_8",
+      "192.168.1.14",
+      "DOMAIN_ADMIN"
+    ],
+    "hops_to_domain_admin": 2,
+    "recommended_actions": [
+      "Enforce MFA immediately on this account",
+      "Patch CVE-2018-7600 on host 192.168.1.14"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673418"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-5",
+    "title": "High Risk: CVE-2017-5638 on account 'sara_8'",
+    "severity": "High",
+    "cve_id": "CVE-2017-5638",
+    "host": "192.168.1.14",
+    "owner": "sara_8",
+    "epss_score": "0.99999",
+    "identity_exposure_score": "0.45",
+    "unified_risk_score": 0.725,
+    "attack_path": [
+      "sara_8",
+      "192.168.1.14",
+      "DOMAIN_ADMIN"
+    ],
+    "hops_to_domain_admin": 2,
+    "recommended_actions": [
+      "Enforce MFA immediately on this account",
+      "Patch CVE-2017-5638 on host 192.168.1.14"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673433"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-6",
+    "title": "High Risk: CVE-2014-0160 on account 'sara_10'",
+    "severity": "High",
+    "cve_id": "CVE-2014-0160",
+    "host": "192.168.1.11",
+    "owner": "sara_10",
+    "epss_score": "0.99999",
+    "identity_exposure_score": "0.42",
+    "unified_risk_score": 0.71,
+    "attack_path": [
+      "sara_10",
+      "192.168.1.11",
+      "DOMAIN_ADMIN"
+    ],
+    "hops_to_domain_admin": 2,
+    "recommended_actions": [
+      "Enforce MFA immediately on this account",
+      "Patch CVE-2014-0160 on host 192.168.1.11"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673454"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-7",
+    "title": "High Risk: CVE-2019-0708 on account 'sara_10'",
+    "severity": "High",
+    "cve_id": "CVE-2019-0708",
+    "host": "192.168.1.11",
+    "owner": "sara_10",
+    "epss_score": "0.99999",
+    "identity_exposure_score": "0.42",
+    "unified_risk_score": 0.71,
+    "attack_path": [
+      "sara_10",
+      "192.168.1.11",
+      "DOMAIN_ADMIN"
+    ],
+    "hops_to_domain_admin": 2,
+    "recommended_actions": [
+      "Enforce MFA immediately on this account",
+      "Patch CVE-2019-0708 on host 192.168.1.11"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673475"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-8",
+    "title": "High Risk: CVE-2017-11882 on account 'sara_21'",
+    "severity": "High",
+    "cve_id": "CVE-2017-11882",
+    "host": "192.168.1.20",
+    "owner": "sara_21",
+    "epss_score": "0.99945",
+    "identity_exposure_score": "0.35",
+    "unified_risk_score": 0.675,
+    "attack_path": [
+      "sara_21",
+      "riya_11",
+      "192.168.1.20",
+      "DOMAIN_ADMIN"
+    ],
+    "hops_to_domain_admin": 3,
+    "recommended_actions": [
+      "Review lateral movement path; rotate credentials for all accounts in the chain",
+      "Patch CVE-2017-11882 on host 192.168.1.20"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673496"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-9",
+    "title": "High Risk: CVE-2020-5902 on account 'sara_21'",
+    "severity": "High",
+    "cve_id": "CVE-2020-5902",
+    "host": "192.168.1.20",
+    "owner": "sara_21",
+    "epss_score": "0.99999",
+    "identity_exposure_score": "0.35",
+    "unified_risk_score": 0.675,
+    "attack_path": [
+      "sara_21",
+      "riya_11",
+      "192.168.1.20",
+      "DOMAIN_ADMIN"
+    ],
+    "hops_to_domain_admin": 3,
+    "recommended_actions": [
+      "Review lateral movement path; rotate credentials for all accounts in the chain",
+      "Patch CVE-2020-5902 on host 192.168.1.20"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673517"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-10",
+    "title": "High Risk: CVE-2018-8174 on account 'priya_12'",
+    "severity": "High",
+    "cve_id": "CVE-2018-8174",
+    "host": "192.168.1.21",
+    "owner": "priya_12",
+    "epss_score": "0.88508",
+    "identity_exposure_score": "0.42",
+    "unified_risk_score": 0.653,
+    "attack_path": [
+      "priya_12",
+      "192.168.1.21",
+      "DOMAIN_ADMIN"
+    ],
+    "hops_to_domain_admin": 2,
+    "recommended_actions": [
+      "Enforce MFA immediately on this account",
+      "Patch CVE-2018-8174 on host 192.168.1.21"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673583"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-11",
+    "title": "High Risk: CVE-2015-2808 on account 'john_16'",
+    "severity": "High",
+    "cve_id": "CVE-2015-2808",
+    "host": "192.168.1.13",
+    "owner": "john_16",
+    "epss_score": "0.73851",
+    "identity_exposure_score": "0.51",
+    "unified_risk_score": 0.624,
+    "attack_path": [
+      "john_16",
+      "192.168.1.13",
+      "DOMAIN_ADMIN"
+    ],
+    "hops_to_domain_admin": 2,
+    "recommended_actions": [
+      "Enforce MFA immediately on this account",
+      "Patch CVE-2015-2808 on host 192.168.1.13"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673631"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-12",
+    "title": "High Risk: CVE-2021-26855 on account 'priya_20'",
+    "severity": "High",
+    "cve_id": "CVE-2021-26855",
+    "host": "192.168.1.17",
+    "owner": "priya_20",
+    "epss_score": "0.99996",
+    "identity_exposure_score": "0.21",
+    "unified_risk_score": 0.605,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2021-26855 on host 192.168.1.17"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673652"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-13",
+    "title": "High Risk: CVE-2022-30190 on account 'priya_20'",
+    "severity": "High",
+    "cve_id": "CVE-2022-30190",
+    "host": "192.168.1.17",
+    "owner": "priya_20",
+    "epss_score": "0.99234",
+    "identity_exposure_score": "0.21",
+    "unified_risk_score": 0.601,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2022-30190 on host 192.168.1.17"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673675"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-14",
+    "title": "High Risk: CVE-2019-19781 on account 'sara_1'",
+    "severity": "High",
+    "cve_id": "CVE-2019-19781",
+    "host": "192.168.1.19",
+    "owner": "sara_1",
+    "epss_score": "0.99999",
+    "identity_exposure_score": "0.15",
+    "unified_risk_score": 0.575,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2019-19781 on host 192.168.1.19"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673712"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-15",
+    "title": "High Risk: CVE-2021-21972 on account 'sara_1'",
+    "severity": "High",
+    "cve_id": "CVE-2021-21972",
+    "host": "192.168.1.19",
+    "owner": "sara_1",
+    "epss_score": "0.99865",
+    "identity_exposure_score": "0.15",
+    "unified_risk_score": 0.574,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2021-21972 on host 192.168.1.19"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673735"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-16",
+    "title": "High Risk: CVE-2021-40444 on account 'john_24'",
+    "severity": "High",
+    "cve_id": "CVE-2021-40444",
+    "host": "192.168.1.22",
+    "owner": "john_24",
+    "epss_score": "0.9745",
+    "identity_exposure_score": "0.09",
+    "unified_risk_score": 0.532,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2021-40444 on host 192.168.1.22"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673757"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-17",
+    "title": "High Risk: CVE-2019-11510 on account 'raj_25'",
+    "severity": "High",
+    "cve_id": "CVE-2019-11510",
+    "host": "192.168.1.16",
+    "owner": "raj_25",
+    "epss_score": "0.99999",
+    "identity_exposure_score": "0.03",
+    "unified_risk_score": 0.515,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2019-11510 on host 192.168.1.16"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673781"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-18",
+    "title": "High Risk: CVE-2018-13379 on account 'vikram_28'",
+    "severity": "High",
+    "cve_id": "CVE-2018-13379",
+    "host": "192.168.1.18",
+    "owner": "vikram_28",
+    "epss_score": "0.99999",
+    "identity_exposure_score": "0.03",
+    "unified_risk_score": 0.515,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2018-13379 on host 192.168.1.18"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673794"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-19",
+    "title": "High Risk: CVE-2020-14882 on account 'vikram_28'",
+    "severity": "High",
+    "cve_id": "CVE-2020-14882",
+    "host": "192.168.1.18",
+    "owner": "vikram_28",
+    "epss_score": "0.99997",
+    "identity_exposure_score": "0.03",
+    "unified_risk_score": 0.515,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2020-14882 on host 192.168.1.18"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673816"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-20",
+    "title": "High Risk: CVE-2016-0189 on account 'john_24'",
+    "severity": "High",
+    "cve_id": "CVE-2016-0189",
+    "host": "192.168.1.22",
+    "owner": "john_24",
+    "epss_score": "0.94062",
+    "identity_exposure_score": "0.09",
+    "unified_risk_score": 0.515,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2016-0189 on host 192.168.1.22"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673837"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-21",
+    "title": "High Risk: CVE-2015-1635 on account 'amit_27'",
+    "severity": "High",
+    "cve_id": "CVE-2015-1635",
+    "host": "192.168.1.23",
+    "owner": "amit_27",
+    "epss_score": "0.99999",
+    "identity_exposure_score": "0.03",
+    "unified_risk_score": 0.515,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2015-1635 on host 192.168.1.23"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673858"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-22",
+    "title": "High Risk: CVE-2014-6271 on account 'amit_27'",
+    "severity": "High",
+    "cve_id": "CVE-2014-6271",
+    "host": "192.168.1.23",
+    "owner": "amit_27",
+    "epss_score": "0.99999",
+    "identity_exposure_score": "0.03",
+    "unified_risk_score": 0.515,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2014-6271 on host 192.168.1.23"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673878"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-23",
+    "title": "High Risk: CVE-2020-1472 on account 'sara_13'",
+    "severity": "High",
+    "cve_id": "CVE-2020-1472",
+    "host": "192.168.1.12",
+    "owner": "sara_13",
+    "epss_score": "0.99512",
+    "identity_exposure_score": "0.03",
+    "unified_risk_score": 0.513,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2020-1472 on host 192.168.1.12"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673898"
+  },
+  {
+    "ticket_id": "XENTRA-20260827124851-24",
+    "title": "High Risk: CVE-2012-1823 on account 'unknown'",
+    "severity": "High",
+    "cve_id": "CVE-2012-1823",
+    "host": "192.168.1.24",
+    "owner": "unknown",
+    "epss_score": "0.99998",
+    "identity_exposure_score": "0.0",
+    "unified_risk_score": 0.5,
+    "attack_path": "No confirmed path found",
+    "hops_to_domain_admin": "N/A",
+    "recommended_actions": [
+      "Patch CVE-2012-1823 on host 192.168.1.24"
+    ],
+    "status": "Open",
+    "created_at": "2026-08-27T12:48:51.673920"
+  }
+]
