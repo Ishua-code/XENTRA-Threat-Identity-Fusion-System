@@ -1,4 +1,5 @@
 import csv
+import json
 import networkx as nx
 import yaml
 from xentra.utils.logger import get_logger
@@ -12,16 +13,6 @@ class GraphRiskAnalyzer:
         self.graph = nx.DiGraph()
 
     def build_graph_from_identities(self, identities):
-        """
-        Builds an attack graph modeling realistic privilege escalation:
-        - domain_admin / service_account: username -> host -> DOMAIN_ADMIN
-          (they own real access to a machine that reaches Domain Admin)
-        - standard account: NO direct host edge (a standard user browsing their
-          own machine is not inherently an attack path to Domain Admin).
-          Instead, if they have no MFA and share a host with a privileged
-          account, they get a pivot edge: username -> privileged_username,
-          representing credential theft / lateral movement risk.
-        """
         self.graph.add_node("DOMAIN_ADMIN")
 
         host_to_privileged = {}
@@ -52,24 +43,26 @@ class GraphRiskAnalyzer:
 
     def get_shortest_path_score(self, username):
         try:
-            path_length = nx.shortest_path_length(self.graph, source=username, target="DOMAIN_ADMIN")
+            path = nx.shortest_path(self.graph, source=username, target="DOMAIN_ADMIN")
+            path_length = len(path) - 1
             score = round(1 / path_length, 3)
-            return score, path_length
+            return score, path_length, path
         except (nx.NetworkXNoPath, nx.NodeNotFound):
-            return 0.0, None
+            return 0.0, None, None
 
     def get_betweenness_centrality(self):
-        centrality = nx.betweenness_centrality(self.graph)
-        return centrality
+        return nx.betweenness_centrality(self.graph)
 
     def analyze_all(self, identities):
         self.build_graph_from_identities(identities)
         centrality_scores = self.get_betweenness_centrality()
 
         results = []
+        attack_paths = []
+
         for identity in identities:
             username = identity["username"]
-            proximity_score, hops = self.get_shortest_path_score(username)
+            proximity_score, hops, path = self.get_shortest_path_score(username)
             centrality_score = round(centrality_scores.get(username, 0.0), 3)
 
             results.append({
@@ -78,11 +71,25 @@ class GraphRiskAnalyzer:
                 "graph_proximity_score": proximity_score,
                 "betweenness_centrality": centrality_score
             })
-            logger.info(
-                f"{username}: hops={hops}, proximity={proximity_score}, centrality={centrality_score}"
-            )
 
+            if path is not None:
+                attack_paths.append({
+                    "account": username,
+                    "path": path,
+                    "hops": hops
+                })
+                logger.info(f"{username}: ATTACK PATH = {' -> '.join(path)} ({hops} hops)")
+            else:
+                logger.info(f"{username}: No attack path to Domain Admin (isolated/secure)")
+
+        self._save_attack_paths(attack_paths)
         return results
+
+    def _save_attack_paths(self, attack_paths):
+        attack_paths.sort(key=lambda x: x["hops"])
+        with open("engine/attack-paths.json", "w") as f:
+            json.dump(attack_paths, f, indent=2)
+        logger.info(f"Saved {len(attack_paths)} attack paths to engine/attack-paths.json")
 
     def save_results(self, results, output_path="engine/graph-risk-analysis.csv"):
         with open(output_path, "w", newline="") as f:

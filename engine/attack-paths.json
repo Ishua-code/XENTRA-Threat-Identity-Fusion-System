@@ -1,0 +1,198 @@
+[
+  {
+    "account": "sara_0",
+    "path": [
+      "sara_0",
+      "192.168.1.12",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "arjun_2",
+    "path": [
+      "arjun_2",
+      "192.168.1.18",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "anita_3",
+    "path": [
+      "anita_3",
+      "192.168.1.16",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "priya_6",
+    "path": [
+      "priya_6",
+      "192.168.1.23",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "sara_8",
+    "path": [
+      "sara_8",
+      "192.168.1.14",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "anita_9",
+    "path": [
+      "anita_9",
+      "192.168.1.21",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "sara_10",
+    "path": [
+      "sara_10",
+      "192.168.1.11",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "riya_11",
+    "path": [
+      "riya_11",
+      "192.168.1.20",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "priya_12",
+    "path": [
+      "priya_12",
+      "192.168.1.21",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "priya_15",
+    "path": [
+      "priya_15",
+      "192.168.1.23",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "john_16",
+    "path": [
+      "john_16",
+      "192.168.1.13",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "anita_17",
+    "path": [
+      "anita_17",
+      "192.168.1.16",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "meena_18",
+    "path": [
+      "meena_18",
+      "192.168.1.18",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "vikram_29",
+    "path": [
+      "vikram_29",
+      "192.168.1.10",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 2
+  },
+  {
+    "account": "priya_7",
+    "path": [
+      "priya_7",
+      "arjun_2",
+      "192.168.1.18",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 3
+  },
+  {
+    "account": "meena_14",
+    "path": [
+      "meena_14",
+      "john_16",
+      "192.168.1.13",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 3
+  },
+  {
+    "account": "raj_19",
+    "path": [
+      "raj_19",
+      "anita_3",
+      "192.168.1.16",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 3
+  },
+  {
+    "account": "sara_21",
+    "path": [
+      "sara_21",
+      "riya_11",
+      "192.168.1.20",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 3
+  },
+  {
+    "account": "amit_22",
+    "path": [
+      "amit_22",
+      "anita_3",
+      "192.168.1.16",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 3
+  },
+  {
+    "account": "arjun_23",
+    "path": [
+      "arjun_23",
+      "arjun_2",
+      "192.168.1.18",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 3
+  },
+  {
+    "account": "amit_26",
+    "path": [
+      "amit_26",
+      "arjun_2",
+      "192.168.1.18",
+      "DOMAIN_ADMIN"
+    ],
+    "hops": 3
+  }
+]
