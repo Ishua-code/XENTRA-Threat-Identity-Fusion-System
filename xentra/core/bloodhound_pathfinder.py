@@ -1,3 +1,4 @@
+import csv
 import yaml
 from neo4j import GraphDatabase
 from xentra.core.thehive_client import TheHiveClient
@@ -96,6 +97,41 @@ class BloodHoundPathfinder:
             tickets.append(ticket)
             logger.info(f"[{status}] {path['nodes'][0]} -> {path['nodes'][-1]} | severity={ticket['severity']}")
 
+        self.save_graph_risk_csv()
         self.driver.close()
         logger.info(f"Done. {created} case(s) created out of {len(seen_sigs)} unique path(s).")
         return tickets
+
+    def save_graph_risk_csv(self, output_path="engine/graph-risk-analysis.csv"):
+        import networkx as nx
+        g = nx.DiGraph()
+        paths = self.get_paths_to_domain_admins()
+
+        for path in paths:
+            nodes = path["nodes"]
+            for i in range(len(nodes) - 1):
+                g.add_edge(nodes[i], nodes[i + 1])
+
+        centrality = nx.betweenness_centrality(g)
+
+        rows = []
+        seen_users = set()
+        for path in paths:
+            username = path["nodes"][0]
+            if username in seen_users:
+                continue
+            seen_users.add(username)
+            hops = len(path["nodes"]) - 1
+            proximity = round(1 / hops, 3) if hops > 0 else 0.0
+            rows.append({
+                "username": username,
+                "hops_to_domain_admin": hops,
+                "graph_proximity_score": proximity,
+                "betweenness_centrality": round(centrality.get(username, 0.0), 3),
+            })
+
+        with open(output_path, "w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=rows[0].keys())
+            writer.writeheader()
+            writer.writerows(rows)
+        logger.info(f"Graph risk analysis saved to {output_path}")

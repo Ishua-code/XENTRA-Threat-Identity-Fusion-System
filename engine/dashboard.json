@@ -1,0 +1,203 @@
+{
+  "generated_at": "2026-09-11T17:21:08.433201+00:00",
+  "stats": {
+    "total_vulnerabilities": 30,
+    "identities_monitored": 30,
+    "critical_findings": 0,
+    "active_incidents": 21
+  },
+  "findings": [
+    {
+      "cve_id": "CVE-2021-44228",
+      "host": "192.168.1.10",
+      "owner": "vikram_29",
+      "epss_score": "0.99999",
+      "identity_exposure_score": "0.27",
+      "graph_proximity_score": "0.0",
+      "betweenness_centrality": "0.0",
+      "unified_risk_score": "0.635"
+    },
+    {
+      "cve_id": "CVE-2017-0144",
+      "host": "192.168.1.10",
+      "owner": "vikram_29",
+      "epss_score": "0.9923",
+      "identity_exposure_score": "0.27",
+      "graph_proximity_score": "0.0",
+      "betweenness_centrality": "0.0",
+      "unified_risk_score": "0.631"
+    },
+    {
+      "cve_id": "CVE-2021-26855",
+      "host": "192.168.1.17",
+      "owner": "priya_20",
+      "epss_score": "0.99996",
+      "identity_exposure_score": "0.21",
+      "graph_proximity_score": "0.0",
+      "betweenness_centrality": "0.0",
+      "unified_risk_score": "0.605"
+    },
+    {
+      "cve_id": "CVE-2015-4000",
+      "host": "192.168.1.13",
+      "owner": "john_16",
+      "epss_score": "0.9986",
+      "identity_exposure_score": "0.21",
+      "graph_proximity_score": "0.0",
+      "betweenness_centrality": "0.0",
+      "unified_risk_score": "0.604"
+    },
+    {
+      "cve_id": "CVE-2022-30190",
+      "host": "192.168.1.17",
+      "owner": "priya_20",
+      "epss_score": "0.99234",
+      "identity_exposure_score": "0.21",
+      "graph_proximity_score": "0.0",
+      "betweenness_centrality": "0.0",
+      "unified_risk_score": "0.601"
+    },
+    {
+      "cve_id": "CVE-2018-7600",
+      "host": "192.168.1.14",
+      "owner": "sara_8",
+      "epss_score": "0.99991",
+      "identity_exposure_score": "0.15",
+      "graph_proximity_score": "0.0",
+      "betweenness_centrality": "0.0",
+      "unified_risk_score": "0.575"
+    },
+    {
+      "cve_id": "CVE-2017-5638",
+      "host": "192.168.1.14",
+      "owner": "sara_8",
+      "epss_score": "0.99999",
+      "identity_exposure_score": "0.15",
+      "graph_proximity_score": "0.0",
+      "betweenness_centrality": "0.0",
+      "unified_risk_score": "0.575"
+    },
+    {
+      "cve_id": "CVE-2019-19781",
+      "host": "192.168.1.19",
+      "owner": "sara_1",
+      "epss_score": "0.99999",
+      "identity_exposure_score": "0.15",
+      "graph_proximity_score": "0.0",
+      "betweenness_centrality": "0.0",
+      "unified_risk_score": "0.575"
+    },
+    {
+      "cve_id": "CVE-2017-11882",
+      "host": "192.168.1.20",
+      "owner": "sara_21",
+      "epss_score": "0.99945",
+      "identity_exposure_score": "0.15",
+      "graph_proximity_score": "0.0",
+      "betweenness_centrality": "0.0",
+      "unified_risk_score": "0.575"
+    },
+    {
+      "cve_id": "CVE-2020-5902",
+      "host": "192.168.1.20",
+      "owner": "sara_21",
+      "epss_score": "0.99999",
+      "identity_exposure_score": "0.15",
+      "graph_proximity_score": "0.0",
+      "betweenness_centrality": "0.0",
+      "unified_risk_score": "0.575"
+    }
+  ],
+  "attack_paths": [
+    {
+      "account": "sara_0",
+      "path": [
+        "sara_0",
+        "192.168.1.12",
+        "DOMAIN_ADMIN"
+      ],
+      "hops": 2
+    },
+    {
+      "account": "arjun_2",
+      "path": [
+        "arjun_2",
+        "192.168.1.18",
+        "DOMAIN_ADMIN"
+      ],
+      "hops": 2
+    },
+    {
+      "account": "anita_3",
+      "path": [
+        "anita_3",
+        "192.168.1.16",
+        "DOMAIN_ADMIN"
+      ],
+      "hops": 2
+    },
+    {
+      "account": "priya_6",
+      "path": [
+        "priya_6",
+        "192.168.1.23",
+        "DOMAIN_ADMIN"
+      ],
+      "hops": 2
+    },
+    {
+      "account": "sara_8",
+      "path": [
+        "sara_8",
+        "192.168.1.14",
+        "DOMAIN_ADMIN"
+      ],
+      "hops": 2
+    },
+    {
+      "account": "anita_9",
+      "path": [
+        "anita_9",
+        "192.168.1.21",
+        "DOMAIN_ADMIN"
+      ],
+      "hops": 2
+    },
+    {
+      "account": "sara_10",
+      "path": [
+        "sara_10",
+        "192.168.1.11",
+        "DOMAIN_ADMIN"
+      ],
+      "hops": 2
+    },
+    {
+      "account": "riya_11",
+      "path": [
+        "riya_11",
+        "192.168.1.20",
+        "DOMAIN_ADMIN"
+      ],
+      "hops": 2
+    },
+    {
+      "account": "priya_12",
+      "path": [
+        "priya_12",
+        "192.168.1.21",
+        "DOMAIN_ADMIN"
+      ],
+      "hops": 2
+    },
+    {
+      "account": "priya_15",
+      "path": [
+        "priya_15",
+        "192.168.1.23",
+        "DOMAIN_ADMIN"
+      ],
+      "hops": 2
+    }
+  ]
+}

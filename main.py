@@ -33,6 +33,8 @@ def run_pipeline():
     for r in results[:5]:
         logger.info(f"  {r['cve_id']} | {r['owner']} | Score: {r['unified_risk_score']}")
     logger.info("=" * 50)
+    from xentra.core.export_dashboard import export_dashboard
+    export_dashboard()
     logger.info("Pipeline complete.")
 
 if __name__ == "__main__":
