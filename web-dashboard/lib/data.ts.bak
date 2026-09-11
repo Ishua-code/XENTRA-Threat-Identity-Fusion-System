@@ -1,0 +1,230 @@
+export type Severity = 'critical' | 'high' | 'medium' | 'low'
+
+export function severityFromScore(score: number): Severity {
+  if (score >= 0.7) return 'critical'
+  if (score >= 0.5) return 'high'
+  if (score >= 0.3) return 'medium'
+  return 'low'
+}
+
+export type RiskFinding = {
+  cve: string
+  score: number
+}
+
+export const topRiskFindings: RiskFinding[] = [
+  { cve: 'CVE-2021-44228', score: 0.95 },
+  { cve: 'CVE-2017-0144', score: 0.89 },
+  { cve: 'CVE-2020-1472', score: 0.87 },
+  { cve: 'CVE-2018-7600', score: 0.82 },
+  { cve: 'CVE-2015-4000', score: 0.78 },
+  { cve: 'CVE-2019-0708', score: 0.75 },
+  { cve: 'CVE-2021-34527', score: 0.71 },
+  { cve: 'CVE-2017-5638', score: 0.68 },
+  { cve: 'CVE-2020-5902', score: 0.65 },
+  { cve: 'CVE-2019-11510', score: 0.61 },
+]
+
+export type VulnStatus = 'Critical' | 'High' | 'Medium'
+
+export type Vulnerability = {
+  cve: string
+  name: string
+  host: string
+  owner: string
+  epss: number
+  identityRisk: number
+  unified: number
+  status: VulnStatus
+  description: string
+  vector: string
+}
+
+export const vulnerabilities: Vulnerability[] = [
+  {
+    cve: 'CVE-2021-44228',
+    name: 'Apache Log4j2 RCE (Log4Shell)',
+    host: 'prod-api-07.corp.internal',
+    owner: 'platform-eng',
+    epss: 0.976,
+    identityRisk: 0.91,
+    unified: 0.95,
+    status: 'Critical',
+    description:
+      'JNDI lookup in Log4j2 allows unauthenticated remote code execution on internet-facing API workloads.',
+    vector: 'AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H',
+  },
+  {
+    cve: 'CVE-2017-0144',
+    name: 'SMBv1 Remote Code Execution (EternalBlue)',
+    host: 'file-srv-02.corp.internal',
+    owner: 'it-infra',
+    epss: 0.944,
+    identityRisk: 0.84,
+    unified: 0.89,
+    status: 'Critical',
+    description:
+      'SMBv1 protocol flaw enabling wormable remote code execution across unpatched Windows hosts.',
+    vector: 'AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+  },
+  {
+    cve: 'CVE-2020-1472',
+    name: 'Netlogon Privilege Escalation (Zerologon)',
+    host: 'dc-01.corp.internal',
+    owner: 'identity-team',
+    epss: 0.918,
+    identityRisk: 0.97,
+    unified: 0.87,
+    status: 'Critical',
+    description:
+      'Cryptographic flaw in Netlogon lets an attacker impersonate any domain-joined machine, including the DC.',
+    vector: 'AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H',
+  },
+  {
+    cve: 'CVE-2018-7600',
+    name: 'Drupalgeddon2 Remote Code Execution',
+    host: 'cms-web-11.corp.internal',
+    owner: 'marketing-web',
+    epss: 0.887,
+    identityRisk: 0.52,
+    unified: 0.82,
+    status: 'Critical',
+    description:
+      'Improper input validation in Drupal core allows remote code execution against public CMS nodes.',
+    vector: 'AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+  },
+  {
+    cve: 'CVE-2015-4000',
+    name: 'TLS Diffie-Hellman Downgrade (Logjam)',
+    host: 'edge-lb-03.corp.internal',
+    owner: 'network-ops',
+    epss: 0.641,
+    identityRisk: 0.44,
+    unified: 0.78,
+    status: 'High',
+    description:
+      'Weak DH parameters allow man-in-the-middle attackers to downgrade TLS sessions to export-grade crypto.',
+    vector: 'AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N',
+  },
+  {
+    cve: 'CVE-2019-0708',
+    name: 'RDP Remote Code Execution (BlueKeep)',
+    host: 'jump-host-05.corp.internal',
+    owner: 'it-infra',
+    epss: 0.833,
+    identityRisk: 0.79,
+    unified: 0.75,
+    status: 'High',
+    description:
+      'Pre-authentication RDP vulnerability permitting wormable remote code execution on legacy Windows.',
+    vector: 'AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+  },
+  {
+    cve: 'CVE-2021-34527',
+    name: 'Windows Print Spooler RCE (PrintNightmare)',
+    host: 'print-srv-01.corp.internal',
+    owner: 'it-infra',
+    epss: 0.802,
+    identityRisk: 0.73,
+    unified: 0.71,
+    status: 'High',
+    description:
+      'Print Spooler service flaw allowing remote code execution and privilege escalation to SYSTEM.',
+    vector: 'AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H',
+  },
+  {
+    cve: 'CVE-2017-5638',
+    name: 'Apache Struts2 RCE (Jakarta Multipart)',
+    host: 'legacy-app-09.corp.internal',
+    owner: 'finance-apps',
+    epss: 0.714,
+    identityRisk: 0.48,
+    unified: 0.68,
+    status: 'High',
+    description:
+      'Improper handling of the Content-Type header in Struts2 enables remote code execution.',
+    vector: 'AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+  },
+  {
+    cve: 'CVE-2020-5902',
+    name: 'F5 BIG-IP TMUI RCE',
+    host: 'bigip-mgmt-02.corp.internal',
+    owner: 'network-ops',
+    epss: 0.688,
+    identityRisk: 0.51,
+    unified: 0.65,
+    status: 'Medium',
+    description:
+      'Traffic Management UI directory traversal leading to unauthenticated remote code execution.',
+    vector: 'AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H',
+  },
+  {
+    cve: 'CVE-2019-11510',
+    name: 'Pulse Secure VPN Arbitrary File Read',
+    host: 'vpn-gw-01.corp.internal',
+    owner: 'network-ops',
+    epss: 0.655,
+    identityRisk: 0.62,
+    unified: 0.61,
+    status: 'Medium',
+    description:
+      'Path traversal in Pulse Connect Secure exposes credentials and session data from the VPN gateway.',
+    vector: 'AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N',
+  },
+]
+
+export type Identity = {
+  username: string
+  privilege: 'Domain Admin' | 'Server Admin' | 'Privileged' | 'Standard'
+  mfa: boolean
+  hops: number
+  risk: number
+}
+
+export const topIdentities: Identity[] = [
+  { username: 'svc_backup', privilege: 'Domain Admin', mfa: false, hops: 0, risk: 0.97 },
+  { username: 'a.harrington', privilege: 'Server Admin', mfa: false, hops: 1, risk: 0.88 },
+  { username: 'devops_ci', privilege: 'Privileged', mfa: false, hops: 2, risk: 0.81 },
+  { username: 'm.okafor', privilege: 'Server Admin', mfa: true, hops: 2, risk: 0.69 },
+  { username: 'j.reyes', privilege: 'Standard', mfa: true, hops: 3, risk: 0.54 },
+]
+
+export type Incident = {
+  id: string
+  title: string
+  severity: Severity
+  minutesAgo: number
+}
+
+export const incidents: Incident[] = [
+  { id: 'INC-4821', title: 'Log4Shell exploitation attempt on prod-api-07', severity: 'critical', minutesAgo: 2 },
+  { id: 'INC-4820', title: 'Zerologon-style Netlogon anomaly on dc-01', severity: 'critical', minutesAgo: 11 },
+  { id: 'INC-4819', title: 'svc_backup logged in without MFA from new geo', severity: 'high', minutesAgo: 26 },
+  { id: 'INC-4818', title: 'Lateral movement detected: jump-host-05 → dc-01', severity: 'high', minutesAgo: 43 },
+  { id: 'INC-4817', title: 'PrintNightmare payload blocked on print-srv-01', severity: 'medium', minutesAgo: 68 },
+  { id: 'INC-4816', title: 'Expired TLS cipher suite negotiated on edge-lb-03', severity: 'medium', minutesAgo: 95 },
+]
+
+export type GraphNode = {
+  id: string
+  label: string
+  kind: 'entry' | 'pivot' | 'server' | 'target'
+  x: number
+  y: number
+}
+
+export type GraphEdge = { from: string; to: string }
+
+export const attackPath: { nodes: GraphNode[]; edges: GraphEdge[] } = {
+  nodes: [
+    { id: 'weak_user', label: 'weak_user', kind: 'entry', x: 14, y: 22 },
+    { id: 'admin_pivot', label: 'admin_pivot', kind: 'pivot', x: 42, y: 60 },
+    { id: 'domain_server', label: 'DOMAIN_SERVER', kind: 'server', x: 68, y: 30 },
+    { id: 'domain_admin', label: 'DOMAIN_ADMIN', kind: 'target', x: 90, y: 70 },
+  ],
+  edges: [
+    { from: 'weak_user', to: 'admin_pivot' },
+    { from: 'admin_pivot', to: 'domain_server' },
+    { from: 'domain_server', to: 'domain_admin' },
+  ],
+}
