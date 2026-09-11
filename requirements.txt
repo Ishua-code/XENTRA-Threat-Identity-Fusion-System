@@ -4,3 +4,4 @@ streamlit
 networkx
 pyyaml
 pytest
+neo4j

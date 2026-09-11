@@ -1,6 +1,6 @@
 [
   {
-    "ticket_id": "XENTRA-20260827124851-1",
+    "ticket_id": "XENTRA-20260829083948-1",
     "title": "High Risk: CVE-2021-44228 on account 'vikram_29'",
     "severity": "High",
     "cve_id": "CVE-2021-44228",
@@ -20,10 +20,10 @@
       "Patch CVE-2021-44228 on host 192.168.1.10"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673312"
+    "created_at": "2026-08-29T08:39:48.624464"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-2",
+    "ticket_id": "XENTRA-20260829083948-2",
     "title": "High Risk: CVE-2017-0144 on account 'vikram_29'",
     "severity": "High",
     "cve_id": "CVE-2017-0144",
@@ -43,33 +43,10 @@
       "Patch CVE-2017-0144 on host 192.168.1.10"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673359"
+    "created_at": "2026-08-29T08:39:48.624515"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-3",
-    "title": "High Risk: CVE-2015-4000 on account 'john_16'",
-    "severity": "High",
-    "cve_id": "CVE-2015-4000",
-    "host": "192.168.1.13",
-    "owner": "john_16",
-    "epss_score": "0.9986",
-    "identity_exposure_score": "0.51",
-    "unified_risk_score": 0.754,
-    "attack_path": [
-      "john_16",
-      "192.168.1.13",
-      "DOMAIN_ADMIN"
-    ],
-    "hops_to_domain_admin": 2,
-    "recommended_actions": [
-      "Enforce MFA immediately on this account",
-      "Patch CVE-2015-4000 on host 192.168.1.13"
-    ],
-    "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673388"
-  },
-  {
-    "ticket_id": "XENTRA-20260827124851-4",
+    "ticket_id": "XENTRA-20260829083948-3",
     "title": "High Risk: CVE-2018-7600 on account 'sara_8'",
     "severity": "High",
     "cve_id": "CVE-2018-7600",
@@ -89,10 +66,10 @@
       "Patch CVE-2018-7600 on host 192.168.1.14"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673418"
+    "created_at": "2026-08-29T08:39:48.624546"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-5",
+    "ticket_id": "XENTRA-20260829083948-4",
     "title": "High Risk: CVE-2017-5638 on account 'sara_8'",
     "severity": "High",
     "cve_id": "CVE-2017-5638",
@@ -112,10 +89,10 @@
       "Patch CVE-2017-5638 on host 192.168.1.14"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673433"
+    "created_at": "2026-08-29T08:39:48.624561"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-6",
+    "ticket_id": "XENTRA-20260829083948-5",
     "title": "High Risk: CVE-2014-0160 on account 'sara_10'",
     "severity": "High",
     "cve_id": "CVE-2014-0160",
@@ -135,10 +112,10 @@
       "Patch CVE-2014-0160 on host 192.168.1.11"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673454"
+    "created_at": "2026-08-29T08:39:48.624573"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-7",
+    "ticket_id": "XENTRA-20260829083948-6",
     "title": "High Risk: CVE-2019-0708 on account 'sara_10'",
     "severity": "High",
     "cve_id": "CVE-2019-0708",
@@ -158,10 +135,10 @@
       "Patch CVE-2019-0708 on host 192.168.1.11"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673475"
+    "created_at": "2026-08-29T08:39:48.624585"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-8",
+    "ticket_id": "XENTRA-20260829083948-7",
     "title": "High Risk: CVE-2017-11882 on account 'sara_21'",
     "severity": "High",
     "cve_id": "CVE-2017-11882",
@@ -182,10 +159,10 @@
       "Patch CVE-2017-11882 on host 192.168.1.20"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673496"
+    "created_at": "2026-08-29T08:39:48.624749"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-9",
+    "ticket_id": "XENTRA-20260829083948-8",
     "title": "High Risk: CVE-2020-5902 on account 'sara_21'",
     "severity": "High",
     "cve_id": "CVE-2020-5902",
@@ -206,10 +183,10 @@
       "Patch CVE-2020-5902 on host 192.168.1.20"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673517"
+    "created_at": "2026-08-29T08:39:48.624848"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-10",
+    "ticket_id": "XENTRA-20260829083948-9",
     "title": "High Risk: CVE-2018-8174 on account 'priya_12'",
     "severity": "High",
     "cve_id": "CVE-2018-8174",
@@ -229,10 +206,10 @@
       "Patch CVE-2018-8174 on host 192.168.1.21"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673583"
+    "created_at": "2026-08-29T08:39:48.624918"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-11",
+    "ticket_id": "XENTRA-20260829083948-10",
     "title": "High Risk: CVE-2015-2808 on account 'john_16'",
     "severity": "High",
     "cve_id": "CVE-2015-2808",
@@ -252,10 +229,10 @@
       "Patch CVE-2015-2808 on host 192.168.1.13"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673631"
+    "created_at": "2026-08-29T08:39:48.624976"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-12",
+    "ticket_id": "XENTRA-20260829083948-11",
     "title": "High Risk: CVE-2021-26855 on account 'priya_20'",
     "severity": "High",
     "cve_id": "CVE-2021-26855",
@@ -270,10 +247,10 @@
       "Patch CVE-2021-26855 on host 192.168.1.17"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673652"
+    "created_at": "2026-08-29T08:39:48.625014"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-13",
+    "ticket_id": "XENTRA-20260829083948-12",
     "title": "High Risk: CVE-2022-30190 on account 'priya_20'",
     "severity": "High",
     "cve_id": "CVE-2022-30190",
@@ -288,10 +265,10 @@
       "Patch CVE-2022-30190 on host 192.168.1.17"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673675"
+    "created_at": "2026-08-29T08:39:48.625047"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-14",
+    "ticket_id": "XENTRA-20260829083948-13",
     "title": "High Risk: CVE-2019-19781 on account 'sara_1'",
     "severity": "High",
     "cve_id": "CVE-2019-19781",
@@ -306,10 +283,10 @@
       "Patch CVE-2019-19781 on host 192.168.1.19"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673712"
+    "created_at": "2026-08-29T08:39:48.625110"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-15",
+    "ticket_id": "XENTRA-20260829083948-14",
     "title": "High Risk: CVE-2021-21972 on account 'sara_1'",
     "severity": "High",
     "cve_id": "CVE-2021-21972",
@@ -324,10 +301,10 @@
       "Patch CVE-2021-21972 on host 192.168.1.19"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673735"
+    "created_at": "2026-08-29T08:39:48.625201"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-16",
+    "ticket_id": "XENTRA-20260829083948-15",
     "title": "High Risk: CVE-2021-40444 on account 'john_24'",
     "severity": "High",
     "cve_id": "CVE-2021-40444",
@@ -342,10 +319,10 @@
       "Patch CVE-2021-40444 on host 192.168.1.22"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673757"
+    "created_at": "2026-08-29T08:39:48.625239"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-17",
+    "ticket_id": "XENTRA-20260829083948-16",
     "title": "High Risk: CVE-2019-11510 on account 'raj_25'",
     "severity": "High",
     "cve_id": "CVE-2019-11510",
@@ -360,10 +337,10 @@
       "Patch CVE-2019-11510 on host 192.168.1.16"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673781"
+    "created_at": "2026-08-29T08:39:48.625287"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-18",
+    "ticket_id": "XENTRA-20260829083948-17",
     "title": "High Risk: CVE-2018-13379 on account 'vikram_28'",
     "severity": "High",
     "cve_id": "CVE-2018-13379",
@@ -378,10 +355,10 @@
       "Patch CVE-2018-13379 on host 192.168.1.18"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673794"
+    "created_at": "2026-08-29T08:39:48.625340"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-19",
+    "ticket_id": "XENTRA-20260829083948-18",
     "title": "High Risk: CVE-2020-14882 on account 'vikram_28'",
     "severity": "High",
     "cve_id": "CVE-2020-14882",
@@ -396,10 +373,10 @@
       "Patch CVE-2020-14882 on host 192.168.1.18"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673816"
+    "created_at": "2026-08-29T08:39:48.625408"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-20",
+    "ticket_id": "XENTRA-20260829083948-19",
     "title": "High Risk: CVE-2016-0189 on account 'john_24'",
     "severity": "High",
     "cve_id": "CVE-2016-0189",
@@ -414,10 +391,10 @@
       "Patch CVE-2016-0189 on host 192.168.1.22"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673837"
+    "created_at": "2026-08-29T08:39:48.625460"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-21",
+    "ticket_id": "XENTRA-20260829083948-20",
     "title": "High Risk: CVE-2015-1635 on account 'amit_27'",
     "severity": "High",
     "cve_id": "CVE-2015-1635",
@@ -432,10 +409,10 @@
       "Patch CVE-2015-1635 on host 192.168.1.23"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673858"
+    "created_at": "2026-08-29T08:39:48.625510"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-22",
+    "ticket_id": "XENTRA-20260829083948-21",
     "title": "High Risk: CVE-2014-6271 on account 'amit_27'",
     "severity": "High",
     "cve_id": "CVE-2014-6271",
@@ -450,10 +427,10 @@
       "Patch CVE-2014-6271 on host 192.168.1.23"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673878"
+    "created_at": "2026-08-29T08:39:48.625560"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-23",
+    "ticket_id": "XENTRA-20260829083948-22",
     "title": "High Risk: CVE-2020-1472 on account 'sara_13'",
     "severity": "High",
     "cve_id": "CVE-2020-1472",
@@ -468,10 +445,10 @@
       "Patch CVE-2020-1472 on host 192.168.1.12"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673898"
+    "created_at": "2026-08-29T08:39:48.625610"
   },
   {
-    "ticket_id": "XENTRA-20260827124851-24",
+    "ticket_id": "XENTRA-20260829083948-23",
     "title": "High Risk: CVE-2012-1823 on account 'unknown'",
     "severity": "High",
     "cve_id": "CVE-2012-1823",
@@ -486,6 +463,6 @@
       "Patch CVE-2012-1823 on host 192.168.1.24"
     ],
     "status": "Open",
-    "created_at": "2026-08-27T12:48:51.673920"
+    "created_at": "2026-08-29T08:39:48.625664"
   }
 ]
