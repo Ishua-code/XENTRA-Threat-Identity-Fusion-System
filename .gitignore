@@ -4,3 +4,5 @@ __pycache__/
 venv/
 *.log
 xentra/config/settings.yaml
+*.swp
+.main.py.swp
